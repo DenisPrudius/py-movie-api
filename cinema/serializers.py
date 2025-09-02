@@ -15,6 +15,7 @@ class MovieSerializer(serializers.ModelSerializer):
         instance.title = validated_data.get('title', instance.title)
         instance.description = validated_data.get('description', instance.description)
         instance.duration = validated_data.get('duration', instance.duration)
+        instance.save()
         return instance
 
     class Meta:
